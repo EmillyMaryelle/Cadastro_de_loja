@@ -1,0 +1,53 @@
+ordem = [[]] #uma lista de lista
+
+while True:
+    print("[1]Cadastrar Cliente: ")
+    print("[2]Lista de Cadastrados: ")
+    print("[3]Adicionar Endereço a Cliente ")
+    print("[4]Mostrar Dados ")
+    print("[0]Encerrar ")
+  
+    op = int(input())
+    if op == 1:
+        nova = [] # cria uma lista para adicionar o id, nome e idade da pessoa
+        id = input("Numero do cliente: ")
+        email = input("email: ")
+        senha = input("digite sua senha numerica: ")
+        nome = input("Digite o nome do cliente: ")
+        idade = input("data de nascimento: ")
+        numero = input("numero com DDD: ")
+        endereço = input("rua: ")
+        endereço1 = input("numero: ")
+        endereço2 = input("complemento: ")
+        endereço3 = input("bairro: ")
+        endereço4 = input("cidade: ")
+        endereço5 = input("cep: ")
+        endereço6 = input("ponto de referencia: ")
+        nova.append(id)
+        nova.append(email)
+        nova.append(senha)
+        nova.append(nome)
+        nova.append(idade)
+        nova.append(numero)
+        nova.append(endereço)
+        nova.append(endereço1)
+        nova.append(endereço2)
+        nova.append(endereço3)
+        nova.append(endereço4)
+        nova.append(endereço5)
+        nova.append(endereço6)
+
+        ordem.append(nova)#Adiciona a lista criada com o cadastro da pessoa dentro da lista
+
+    elif op == 2:
+        for mostrar in ordem:
+            for mostrar2 in mostrar:
+                print(mostrar2)#mostra tudo dentro da
+
+    elif op == 3:
+        id = input("Digite o id da pessoa desejada: ")
+    for mostrar in ordem:
+        if id in mostrar:
+             print("Nome: %s - Idade: %s - ID: %s"%(mostrar[1],mostrar[2],mostrar[0]))
+        else:
+            print("Essa pessoa não possui algum dos valores a seguir: Nome, Idade, ID")
