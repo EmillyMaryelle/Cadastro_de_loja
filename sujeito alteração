@@ -1,4 +1,4 @@
-ordem = [[]] #uma lista de lista
+ordem = [[]] 
 
 while True:
     print("[1]Cadastrar Cliente: ")
@@ -9,7 +9,7 @@ while True:
   
     op = int(input())
     if op == 1:
-        nova = [] # cria uma lista para adicionar o id, nome e idade da pessoa
+        nova = [] 
         id = input("Numero do cliente: ")
         email = input("email: ")
         senha = input("digite sua senha numerica: ")
@@ -37,12 +37,12 @@ while True:
         nova.append(endereço5)
         nova.append(endereço6)
 
-        ordem.append(nova)#Adiciona a lista criada com o cadastro da pessoa dentro da lista
+        ordem.append(nova)
 
     elif op == 2:
         for mostrar in ordem:
             for mostrar2 in mostrar:
-                print(mostrar2)#mostra tudo dentro da
+                print(mostrar2)
 
     elif op == 3:
         id = input("Digite o id da pessoa desejada: ")
