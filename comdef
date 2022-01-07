@@ -1,0 +1,98 @@
+
+usuario= []
+cadastrar_cliente = []
+mostrar_cliente = []
+
+def exibir_menu():
+    print('''Escolha o que deseja fazer:
+
+    [1] Cadastrar uma pessoa
+    [2] Listar pessoas cadastradas
+    [3] Procurar dados de uma pessoa
+    [4] Encerrar aplicacao
+   
+    ''')
+
+def cadastrar(pessoas):
+    nome = input('Digite o nome do cliente: ')
+    login = input('Digite o login do cliente: ')
+    senha = input('Digite a senha do cliente: ')
+    email = input('Digite o e-mail do cliente: ')
+    nascimento = input('Digite a data de nascimento do cliente: ')
+    celular = input('Digite o numero de celular do cliente: ')
+    endereco = input('Digite a rua do endereco do cliente: ')
+    n = input('Digite o numero do endereco do cliente: ')
+    complemento = input('Digite o complemento do endereco do cliente: ')
+    bairro = input('Digite o bairro do endereco do cliente: ')
+    cidade= input('Digite a cidade do endereco do cliente: ')
+    cep = input('Digite o cep do endereco do cliente: ')
+    ref = input('Digite um ponto de referencia do endereco do cliente: ')
+    usuario_dados = ( nome, login, senha, email, nascimento, celular, endereco, n, complemento, bairro, cidade, cep, ref)
+    usuario.append(usuario_dados)
+    print(usuario)
+    print('Cliente cadastrado')
+
+def listar(pessoas):
+    for cliente in usuario:
+      login = str(input("Didite o ID desejado"))
+    if(login== cliente[1]):
+      print(f'''
+      Nome: {cliente[0]}
+      login: {cliente[1]}
+      senha: {cliente[2]}
+      email: {cliente[3]}
+      nascimento: {cliente[4]}
+      celular: {cliente[4]}
+      endereco: {cliente[4]}
+      numero do endereco: {cliente[4]}
+      complemento do endereco: {cliente[4]}
+      bairro do endereco: {cliente[4]}
+      cidade do endereco: {cliente[4]}
+      cep do endereco: {cliente[4]}
+      referencia:{cliente[6]}''')
+
+
+def endereco_cliente():
+    for cliente in usuario:
+      endereco = str(input("qual o login do cliente?"))
+    if(endereco == cliente[1]):
+      enderecoo = input('Digite a rua do endereco do cliente: ')
+      nn = input('Digite o numero do endereco do cliente: ')
+      complementoo = input('Digite o complemento do endereco do cliente: ')
+      bairroo = input('Digite o bairro do endereco do cliente: ')
+      cidadee= input('Digite a cidade do endereco do cliente: ')
+      cepp = input('Digite o cep do endereco do cliente: ')
+      referenciaa = input('Digite um ponto de referencia do endereco do cliente: ')
+      usuarios_dadoss= ( enderecoo, nn, complementoo, bairroo, cidadee, cepp, referenciaa)
+      usuario.append(usuarios_dadoss)
+      print(usuarios_dadoss)
+      print('endereco do cliente cadastrado')
+    else:
+       print("erro404")
+    
+def usuario_cadrastrados():
+  for cliente in usuario:
+   print(f'''
+      Nome: {cliente[0]}
+      login: {cliente[1]}''')
+      
+     
+
+def programa() :
+
+    while True:
+        option = exibir_menu()
+
+        if option == 1 :
+            cadastrar_cliente()
+        
+        
+        if option == 2 :
+            endereco_cliente()
+        if option == 3 :
+            mostrar_cliente()
+        if option == 4 :
+            usuario_cadrastrados()
+        if option == 0 :
+           break
+programa()
