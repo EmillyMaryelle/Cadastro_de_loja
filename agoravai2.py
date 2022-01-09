@@ -43,27 +43,6 @@ def cadastro() :
     clientes.append(clientes_dados)
     print(clientes)
     print('Otimo!, estamos com todos os dados e o seu cliente esta cadrastado. Obrigada(o)!')
-   
-def lista() :
-    print1 = str(input("Digita o login do cliente:"))
-    for cliente in clientes:
-     if(print1 == cliente[1]):
-        print(f'''
-      Nome: {cliente[0]}
-      login: {cliente[1]}
-      senha: {cliente[2]}
-      email: {cliente[3]}
-      nascimento: {cliente[4]}
-      celular: {cliente[5]}
-      endereço: {cliente[6]}
-      número: {cliente[7]}
-      complemento: {cliente[8]}
-      bairro: {cliente[9]}
-      cidade: {cliente[10]}
-      cep: {cliente[11]}
-      ref:{cliente[12]}''')
-     else:
-          print('Cliente não Cadrastado, se deseja cadrastar, retorne ao menu e clique na opçao 1.')
                   
 
    
@@ -84,6 +63,27 @@ def adcionar():
       print('endereço do cliente cadastrado')
      else:
            print('Cliente não Cadrastado, se deseja cadrastar, retorne ao menu e clique na opçao 1.')
+
+def lista() :
+    print1 = str(input("Digita o login do cliente:"))
+    for cliente in clientes:
+     if(print1 == cliente[1]):
+        print(f'''
+      Nome: {cliente[0]}
+      login: {cliente[1]}
+      senha: {cliente[2]}
+      email: {cliente[3]}
+      nascimento: {cliente[4]}
+      celular: {cliente[5]}
+      endereço: {cliente[6]}
+      número: {cliente[7]}
+      complemento: {cliente[8]}
+      bairro: {cliente[9]}
+      cidade: {cliente[10]}
+      cep: {cliente[11]}
+      ref:{cliente[12]}''')
+     else:
+          print('Cliente não Cadrastado, se deseja cadrastar, retorne ao menu e clique na opçao 1.')
     
 def cadrastados():
   for cliente in clientes:
